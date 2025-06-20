@@ -1,0 +1,187 @@
+[gd_scene load_steps=6 format=3 uid="uid://c6ke4gtofmhpg"]
+
+[ext_resource type="Texture2D" uid="uid://c8dppn0kdgn4f" path="res://Sprite/THK_Sprites/Hollow_Knight_nail1.png" id="1_ccjrq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ccjrq"]
+size = Vector2(9, 199)
+
+[sub_resource type="Animation" id="Animation_c8wws"]
+resource_name = "Lunge"
+length = 17.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HollowKnightNail1:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.09, 9.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HollowKnightNail1:position:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(259, -0.25, 0, 0.25, 0, 105, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(5, 5.7)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HollowKnightNail1:position:y")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(9, -0.25, 0, 0.25, 0, 9, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(5, 5.7)
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HollowKnightNail2:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 10.13, 17),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("HollowKnightNail2:position:x")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-103, -0.25, 0, 0.25, 0, 53, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(12, 12.6667)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("HollowKnightNail2:position:y")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(29, -0.25, 0, 0.25, 0, 29, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(12, 12.6667)
+}
+
+[sub_resource type="Animation" id="Animation_crllc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HollowKnightNail1:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HollowKnightNail1:position:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(259, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HollowKnightNail1:position:y")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(9, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HollowKnightNail2:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("HollowKnightNail2:position:x")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-103, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("HollowKnightNail2:position:y")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(29, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hncuu"]
+_data = {
+&"Lunge": SubResource("Animation_c8wws"),
+&"RESET": SubResource("Animation_crllc")
+}
+
+[node name="lunge" type="Node2D"]
+
+[node name="HollowKnightNail1" type="Sprite2D" parent="."]
+position = Vector2(259, 9)
+rotation = 1.5708
+texture = ExtResource("1_ccjrq")
+
+[node name="Area2D" type="Area2D" parent="HollowKnightNail1"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HollowKnightNail1/Area2D" groups=["Damagable"]]
+position = Vector2(0.50001, 1.5)
+shape = SubResource("RectangleShape2D_ccjrq")
+
+[node name="HollowKnightNail2" type="Sprite2D" parent="."]
+position = Vector2(-103, 29)
+rotation = -1.5708
+texture = ExtResource("1_ccjrq")
+
+[node name="Area2D" type="Area2D" parent="HollowKnightNail2"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HollowKnightNail2/Area2D" groups=["Damagable"]]
+position = Vector2(0.50001, 1.5)
+shape = SubResource("RectangleShape2D_ccjrq")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_hncuu")
+}
+autoplay = "Lunge"

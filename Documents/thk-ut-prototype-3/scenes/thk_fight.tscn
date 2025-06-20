@@ -1,0 +1,93 @@
+[gd_scene load_steps=6 format=3 uid="uid://b0gwf5wk2vinq"]
+
+[ext_resource type="Script" uid="uid://dqssd0g603g56" path="res://scripts/THK/thk_fight.gd" id="1_3w32m"]
+[ext_resource type="Texture2D" uid="uid://bp3aufmx6rssl" path="res://Sprite/THK_Sprites/fightboxborders.png" id="2_srged"]
+[ext_resource type="Script" uid="uid://qvr63jlbsp30" path="res://scripts/THK/fight_box.gd" id="3_srged"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_srged"]
+size = Vector2(162, 2.38419e-07)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sg5os"]
+size = Vector2(0, 52)
+
+[node name="THK_fight" type="Node2D"]
+script = ExtResource("1_3w32m")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -81.0
+offset_right = 124.0
+offset_bottom = 155.0
+
+[node name="spawn_point" type="Node2D" parent="Control"]
+position = Vector2(81, 26)
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.395
+anchor_top = 0.168
+anchor_right = 0.395
+anchor_bottom = 0.168
+offset_left = -80.975
+offset_top = -26.04
+offset_right = -79.975
+offset_bottom = -25.04
+scale = Vector2(162, 52)
+color = Color(1, 1, 1, 0)
+
+[node name="Borders" type="Node2D" parent="Control/ColorRect"]
+scale = Vector2(0.00617284, 0.0192308)
+
+[node name="Top" type="StaticBody2D" parent="Control/ColorRect/Borders"]
+position = Vector2(81, 1.90735e-06)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/ColorRect/Borders/Top"]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_srged")
+
+[node name="Bottom" type="StaticBody2D" parent="Control/ColorRect/Borders"]
+position = Vector2(81, 51)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/ColorRect/Borders/Bottom"]
+shape = SubResource("RectangleShape2D_srged")
+
+[node name="Left" type="StaticBody2D" parent="Control/ColorRect/Borders"]
+position = Vector2(1, 25)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/ColorRect/Borders/Left"]
+position = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_sg5os")
+
+[node name="Right" type="StaticBody2D" parent="Control/ColorRect/Borders"]
+position = Vector2(161, 25)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/ColorRect/Borders/Right"]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_sg5os")
+
+[node name="Fight_box" type="NinePatchRect" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.395
+anchor_top = 0.168
+anchor_right = 0.395
+anchor_bottom = 0.168
+offset_left = -80.975
+offset_top = -26.04
+offset_right = 81.025
+offset_bottom = 25.96
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(81, 26)
+texture = ExtResource("2_srged")
+region_rect = Rect2(2.01144, 1.85736, 59.9485, 60.1735)
+patch_margin_left = 2
+patch_margin_top = 2
+patch_margin_right = 2
+patch_margin_bottom = 2
+script = ExtResource("3_srged")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(3.15, 3.15)
